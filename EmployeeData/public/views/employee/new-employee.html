@@ -1,0 +1,78 @@
+<div id="post-stream">
+  <div class="row" style="margin: 0px 0px 10px 0px;">
+        <h4>{{title}}</h4>
+  </div>
+  <div class="row" style="margin: 0px 0px 10px 0px;">
+      <form class="form-horizontal" name="form">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nip">NIP</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="nip"
+                    ng-model="employee.nip"
+                    placeholder="Enter NIP"
+                    required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nama">Nama</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" id="nama"
+                    ng-model="employee.nama"
+                    placeholder="Enter Nama"
+                    required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="lantai">Lantai</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" id="lantai"
+                    ng-model="employee.lantai"
+                    placeholder="Enter Lantai"
+                    required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="baris">Baris</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" id="baris"
+                    ng-model="employee.baris"
+                    placeholder="Enter Baris"
+                    required>
+            </div>
+        </div>
+         <div class="form-group">
+            <label class="control-label col-sm-2" for="baris">Kelompok</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" id="kelompok"
+                    ng-model="employee.kelompok"
+                    placeholder="Enter Kelompok"
+                    required>
+            </div>
+        </div>
+         <div class="form-group">
+            <label class="control-label col-sm-2" for="nomor">Nomor</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" id="nomor"
+                    ng-model="employee.nomor"
+                    placeholder="Enter Nomor"
+                    required>
+            </div>
+        </div>
+         <div class="form-group">
+            <label class="control-label col-sm-2" for="baris">Kolom</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" id="kolom"
+                    ng-model="employee.kolom"
+                    placeholder="Enter Kolom"
+                    required>
+            </div>
+        </div>
+        <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" ng-click="saveEmployee()" class="btn btn-success">Save</button>
+                <a href="#/employee" class="btn btn-warning">Cancel</a>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Employee Databook Location - MEAN Stack</title>
+        <script src="/javascripts/lib/angular.min.js"></script>
+        <script src="/javascripts/lib/angular-route.min.js"></script>
+        <script src="/javascripts/lib/angular-resource.min.js"></script>
+        <script src="/javascripts/app.js"></script>
+        <script src="/javascripts/services/employeeService.js"></script>
+        <script src="/javascripts/controllers/employee/list.js"></script>
+        <script src="/javascripts/controllers/employee/create.js"></script>
+        <script src="/javascripts/controllers/employee/edit.js"></script>
+        <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+   <body ng-app="employeeApp">
+    <div id="main" class="container">
+      <nav class="navbar-fluid navbar-default navbar-fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Employee APP!</a>
+					<p class="navbar-text">Employee Catalog with MEAN Stack</p>
+					<p class="navbar-right navbar-text"><a href="#/employee">Employee</a></p>
+        </div>
+      </nav>
+      <div class="col-md-offset-2 col-md-8">
+        <div ng-view>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
