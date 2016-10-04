@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 require('./models/employee');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/employee');
+mongoose.connect('mongodb://localhost:27017/employeedata');
 
 var routes = require('./routes/index');
 var employee = require('./routes/employee');
