@@ -29,4 +29,7 @@ app.config(function($routeProvider){
       templateUrl: '/views/employee/list-employee.html',
       controller: 'searchEmployeeController',
     })
+    .when('/datamap', {
+      templateUrl: '/views/datamap/main-datamap.html'
+    })
 });
