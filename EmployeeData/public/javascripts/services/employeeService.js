@@ -2,6 +2,7 @@ app.factory('employeeService', function($http){
   var employeeService = {
       getAllEmployee: getAllEmployee,
       getEmployeeById: getEmployeeById,
+      getEmployeeByNip: getEmployeeByNip,
       createEmployee: createEmployee,
       modifyEmployee: modifyEmployee,
       deleteEmployee: deleteEmployee
@@ -15,6 +16,13 @@ app.factory('employeeService', function($http){
   function getAllEmployee(){
       return $http({
           url: '/employee',
+          method: 'GET'
+      });
+  }
+
+  function getEmployeeByNip(employeeNip){
+      return $http({
+          url: '/search/'+ employeeNip,
           method: 'GET'
       });
   }

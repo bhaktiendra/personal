@@ -8,8 +8,6 @@ function editEmployeeController($scope, employeeService, $location, $routeParams
   // Get employee by id
   employeeService.getEmployeeById($scope.employeeId).then(function(result){
       $scope.employee = result.data;
-      $scope.employee.genre = $scope.employee.genre._id;
-      $scope.employee.director = $scope.employee.director._id;
       console.log($scope.employee);
   })
   

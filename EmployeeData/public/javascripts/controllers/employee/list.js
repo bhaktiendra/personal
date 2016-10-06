@@ -23,4 +23,8 @@ function listEmployeeController($scope, $rootScope, employeeService, $window){
         });
       }
   }
+  
+  // duplicateNip
+
+  // duplicateName
 }
