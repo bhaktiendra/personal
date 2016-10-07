@@ -31,7 +31,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="emp in employee">
+            <tr ng-repeat="emp in employee | orderBy: 'nip'" >
                 <td>{{ emp.nip }}</td>
                 <td>{{ emp.nama }}</td>
                 <td>{{ emp.lantai }}</td>

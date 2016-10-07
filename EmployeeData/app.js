@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/employeedata');
 var routes = require('./routes/index');
 var employee = require('./routes/employee');
 var search = require('./routes/search');
-var datamap = require('./routes/datamap');
+// var datamap = require('./routes/datamap');
 
 var app = express();
 
@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/employee', employee);
 app.use('/search', search);
-app.use('/datamap', datamap);
+// app.use('/datamap', datamap);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,7 +49,7 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.render( 'error', {
       message: err.message,
       error: err
     });

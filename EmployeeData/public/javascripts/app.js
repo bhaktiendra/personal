@@ -27,9 +27,10 @@ app.config(function($routeProvider){
     })
     .when('/search/:employeeNip', {
       templateUrl: '/views/employee/list-employee.html',
-      controller: 'searchEmployeeController',
+      controller: 'searchEmployeeController'
     })
     .when('/datamap', {
-      templateUrl: '/views/datamap/main-datamap.html'
+      templateUrl: '/views/datamap/main-datamap.html',
+      controller: 'generateDatamapController'
     })
 });
