@@ -1,12 +1,25 @@
 app.controller('searchEmployeeController', searchEmployeeController);
 function searchEmployeeController($scope, $rootScope, employeeService, $window, $routeParams){
-  $scope.employeeNip = $routeParams.employeeNip;
-  $scope.title = "Search Employee NIP: " + $scope.employeeNip;
+  $scope.searchArgs = $routeParams.searchArgs;
+  $scope.title = "Search Employee : " + $scope.searchArgs;
   $scope.employee = [];
-
+  
+  $scope.searchCriteria = [
+    {value: 'nip', name: 'NIP'},
+    {value: 'nama', name: 'Nama'},
+    {value: 'lantai', name: 'Lantai'},
+    {value: 'baris', name: 'Baris'},
+    {value: 'kelompok', name: 'Kelompok'},
+    {value: 'nomor', name: 'Nomor'},
+    {value: 'kolom', name: 'Kolom'}
+  ];
+  
+  $scope.sortType     = 'nip'; // set the default sort type
+  $scope.sortReverse  = false;
+  
   // function to populate employee by nip search
   function populateEmployees(){
-        employeeService.getEmployeeByNip($scope.employeeNip).then(function(result){
+        employeeService.getEmployeeBySearch($scope.searchArgs).then(function(result){
             $scope.employee = result.data;
         });
   }

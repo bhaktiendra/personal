@@ -2,6 +2,18 @@ app.controller('listEmployeeController', listEmployeeController);
 function listEmployeeController($scope, $rootScope, employeeService, $window){
   $scope.title = "List Employees";
   $scope.employee = [];
+  $scope.searchCriteria = [
+    {value: 'nip', name: 'NIP'},
+    {value: 'nama', name: 'Nama'},
+    {value: 'lantai', name: 'Lantai'},
+    {value: 'baris', name: 'Baris'},
+    {value: 'kelompok', name: 'Kelompok'},
+    {value: 'nomor', name: 'Nomor'},
+    {value: 'kolom', name: 'Kolom'}
+  ];
+
+  $scope.sortType     = 'nip'; // set the default sort type
+  $scope.sortReverse  = false;
 
   // function to populate employee
   function populateEmployees(){
@@ -23,8 +35,4 @@ function listEmployeeController($scope, $rootScope, employeeService, $window){
         });
       }
   }
-  
-  // duplicateNip
-
-  // duplicateName
 }

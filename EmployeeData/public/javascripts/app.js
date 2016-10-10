@@ -25,8 +25,8 @@ app.config(function($routeProvider){
       templateUrl: '/views/employee/edit-employee.html',
       controller: 'editEmployeeController'
     })
-    .when('/search/:employeeNip', {
-      templateUrl: '/views/employee/list-employee.html',
+    .when('/search/:searchArgs', {
+      templateUrl: '/views/employee/search-employee.html',
       controller: 'searchEmployeeController'
     })
     .when('/datamap', {
